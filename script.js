@@ -1,3 +1,4 @@
+// This is used to initialize the 16x16 grid 
 for (let i=1; i<17;++i)
 {
     
@@ -14,3 +15,14 @@ for (let i=1; i<17;++i)
         column.appendChild(row);
     }
 }
+
+// Selects all the row element and adds event listener to them
+const grids = document.querySelectorAll('.row');
+grids.forEach(
+    (row) => {
+    row.addEventListener('mouseover', () => {
+        row.setAttribute('style','background-color : black');
+    }
+     )
+} 
+)

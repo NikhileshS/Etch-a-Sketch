@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    width: 480px;
+}
+
+.column{
+    display: flex;
+    height: 30px;
+
+}
+.row{
+    border: 0.5px solid black;
+    height: 30px;
+    width: 30px;
+}

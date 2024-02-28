@@ -20,6 +20,13 @@ body{
     height: 480px;
     width: 480px;
 }
+.box{
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+    width: 480;
+
+}
 
 .column{
     display: flex;
@@ -28,6 +35,6 @@ body{
 }
 .row{
     border: 1px solid black;
-    height: 30px;
+    max-height: 30px;
     width: 30px;
 }

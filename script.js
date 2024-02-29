@@ -1,4 +1,6 @@
 size = 0;
+containersize = 480;
+
 // This is used to initialize the size of the grid
 function gridsize(){
     if(size === 0){
@@ -13,6 +15,8 @@ creategrid(size);
     }
 }
 
+// This function creates the size of the grid by taking in the size input
+
 function creategrid(size){
     const container = document.querySelector('.container');
     const box = document.createElement('div');
@@ -20,19 +24,32 @@ function creategrid(size){
     container.appendChild(box)
 
 for (let i=1; i<size;++i)
-{
+{   
+
     const column = document.createElement('div');
     column.classList.add('column');
     box.appendChild(column);
+
+    sizer = size/2;
+    colsize = containersize/sizer;
+
+    //styles
+    column.style.height = `${colsize}px`;
     
     for (let j=1; j<size;++j)
     {
-        
         const row = document.createElement('div');
+
+        //styles
+        row.style.maxHeight = `${colsize}px`;
+        row.style.width = `${colsize}px`
+
         row.classList.add('row');
+
         column.appendChild(row);
     }
 }
+
 }
 
 // Selects all the row element and adds event listener to them
@@ -42,7 +59,7 @@ const grids = document.querySelectorAll('.row');
 grids.forEach(
     (row) => {
     row.addEventListener('mouseover', () => {
-        row.setAttribute('style','background-color : black');
+        row.style.backgroundColor = 'black';
     }
      )
 } 
@@ -66,7 +83,8 @@ function deletegrids(){
 }
 
 
+
+// Selects the size button and assigns the etch-a-sketch program
+
 const btn = document.querySelector('.size');
 btn.addEventListener('click',etch);
-const deletebutton = document.querySelector('.delete');
-deletebutton.addEventListener('click',deletegrids);

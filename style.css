@@ -21,20 +21,16 @@ body{
     width: 480px;
 }
 .box{
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     min-height: 480px;
-    width: 480;
+    width: 480px;
 
 }
 
 .column{
     display: flex;
-    height: 30px;
+    min-width: 480px;
 
-}
-.row{
-    border: 1px solid black;
-    max-height: 30px;
-    width: 30px;
 }

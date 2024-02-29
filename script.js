@@ -1,7 +1,11 @@
+// Variables initiated here
+
 size = 0;
 containersize = 480;
 
+
 // This is used to initialize the size of the grid
+
 function gridsize(){
     if(size === 0){
 size = prompt('Please Enter the size of the grid (100 max)');
@@ -15,7 +19,7 @@ creategrid(size);
     }
 }
 
-// This function creates the size of the grid by taking in the size input
+// This function creates the size of the grid by taking in the size as input
 
 function creategrid(size){
     const container = document.querySelector('.container');
@@ -30,17 +34,23 @@ for (let i=1; i<size;++i)
     column.classList.add('column');
     box.appendChild(column);
 
+    // These variables are used to identify the size into number of rows or columbs 
     sizer = size/2;
     colsize = containersize/sizer;
 
-    //styles
+    //styles 
+    // we initiate the height in such a way that, it always tries to fit to the container 
+
     column.style.height = `${colsize}px`;
-    
+
     for (let j=1; j<size;++j)
     {
         const row = document.createElement('div');
 
         //styles
+        // we initiate these styles in such that the rows can able to fit properly into the columns 
+        //without overflowing
+
         row.style.maxHeight = `${colsize}px`;
         row.style.width = `${colsize}px`
 
@@ -81,8 +91,6 @@ function deletegrids(){
     container.removeChild(deletegrid)
 
 }
-
-
 
 // Selects the size button and assigns the etch-a-sketch program
 

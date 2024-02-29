@@ -6,12 +6,36 @@ html{
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0;
+    padding: 0;
     min-height: 100%;
     width: 100%;
     gap: 30px;
+    font-size: 24px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    background-color: rgb(241, 241, 241);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    background-color: rgb(36, 35, 36);
+    padding: 25px 0;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -19,6 +43,7 @@ body{
     flex-direction: column;
     height: 480px;
     width: 480px;
+    border: 1px solid black;
 }
 .box{
     border: 1px solid black;
@@ -33,4 +58,13 @@ body{
     display: flex;
     min-width: 480px;
 
+}
+
+button{
+    border-radius: 25px;
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
